@@ -22,7 +22,7 @@ screen_info = pygame.display.Info()
 screen_width = screen_info.current_w
 screen_height = screen_info.current_h
 
-class juego2:
+class Iguala_imagen:
     def __init__(self):
         pygame.init()
         self.juego_2 = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
