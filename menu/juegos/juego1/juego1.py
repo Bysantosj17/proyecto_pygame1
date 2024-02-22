@@ -27,6 +27,7 @@ class Telefono_sin_num:
         pygame.init()
         self.juego_1 = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
         self.color_font = (BLUE)
+        pygame.display.set_caption("Telefono descompuesto")
         
     def corre_juego1(self):
         while True:

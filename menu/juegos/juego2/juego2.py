@@ -27,6 +27,8 @@ class Iguala_imagen:
         pygame.init()
         self.juego_2 = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
         self.color_font = (RED)
+        self.titulo = ("Igual_imagen")
+        pygame.display.set_caption("Igual a la imagen")
         
     def corre_juego2(self):
         while True:
@@ -35,6 +37,6 @@ class Iguala_imagen:
                     pygame.quit()
                     sys.exit()
             
-            self.juego_2.fill(self.color_font)    
+            self.juego_2.fill(self.color_font)
             
             pygame.display.flip()

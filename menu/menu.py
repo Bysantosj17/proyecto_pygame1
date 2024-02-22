@@ -30,6 +30,7 @@ class menu_game:
         pygame.init()
         self.main_menu = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
         self.color_font = (AZUL_CIELO)
+        pygame.display.set_caption("Menu principal")
         self.juego1_activado = True
         self.btn_salir = Button("Salir", ((screen_width//3.6), (screen_height//1.30)), 600,60)
         self.btn_juego1 = Btn_juego_1("Telefono sin numeros",  ((screen_width//3.60), (screen_height//1.50)), 290,60, Telefono_sin_num.corre_juego1)
@@ -50,8 +51,8 @@ class menu_game:
                             a = Telefono_sin_num()
                             a.corre_juego1()
                     if self.btn_juego2.Iniciar_juego_1(pygame.mouse.get_pos()):
-                            a = Iguala_imagen()
-                            a.corre_juego2()
+                            b = Iguala_imagen()
+                            b.corre_juego2()
             
             self.main_menu.fill(self.color_font)
             self.btn_salir.draw(self.main_menu)
