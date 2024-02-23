@@ -30,6 +30,7 @@ class Iguala_imagen:
         self.titulo = ("Igual_imagen")
         pygame.display.set_caption("Igual a la imagen")
         
+        
     def corre_juego2(self):
         while True:
             for event in pygame.event.get():

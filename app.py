@@ -2,5 +2,5 @@
 from menu.menu import *
 
 if __name__ == "__main__":
-    b = menu_game()
-    b.corre_menu()
+    a = Menu_game()
+    a.corre_menu()
