@@ -1,9 +1,10 @@
 import pygame, sys,os
 import pygame.font
 
+
 from menu.assets.botones.btn_salir import *
 from menu.juegos.juego1.assets.botones.btn_menu import *
-from menu.menu import *
+
 
 # Inicializar Pygame
 pygame.init()
@@ -30,7 +31,7 @@ class Telefono_sin_num:
         self.juego_1 = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
         self.color_font = (BLUE)
         pygame.display.set_caption("Telefono descompuesto")
-        self.btn_menu = Btn_menu("Menu", ((screen_width// 1.98), (screen_height//1.50)), 290,60, Menu_game.corre_menu)
+        self.btn_menu = Btn_menu("Menu", ((screen_width// 1.98), (screen_height//1.50)), 290,60)
         
     def corre_juego1(self):
         while True:
@@ -39,11 +40,6 @@ class Telefono_sin_num:
                     pygame.quit()
                     sys.exit()
                     
-                elif event.type == pygame.MOUSEBUTTONDOWN:
-                    if self.btn_menu.regresar_menu(pygame.mouse.get_pos()):
-                        b = Menu_game()
-                        b.corre_juego2()
-            
             self.juego_1.fill(self.color_font)
             self.btn_menu.draw(self.juego_1)
             

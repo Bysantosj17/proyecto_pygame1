@@ -24,3 +24,5 @@ class Btn_juego_1:
         if self.position[0] < x < self.position[0] + self.width and self.position[1] < y < self.position[1] + self.height:
             return True
         return False
+
+    
