@@ -1,6 +1,11 @@
 import pygame, sys, os
 
-from 
+from botones.btn_salir import *
+from botones.btn_juegos import *
+from vista.vista_Telefono_s_num import *
+from controlador.controlador_vista_juego1 import *
+from vista.vista_igual_imagen import *
+from controlador.controlador_vista_juego2 import *
 
 # Inicializar Pygame
 pygame.init()
@@ -22,13 +27,10 @@ carpeta_img = os.path.join(carpeta_proyecto, "imagenes")
 carpeta_img_fondo = os.path.join(carpeta_img, "fondo")
 print(carpeta_img_fondo)
 
-
 # Obtener las dimensiones de la pantalla del dispositivo
 screen_info = pygame.display.Info()
 screen_width = screen_info.current_w
 screen_height = screen_info.current_h
-
-
 
 class Menu_game:
     def __init__(self):
@@ -39,5 +41,5 @@ class Menu_game:
         self.juego1_activado = True
         self.fondo = pygame.transform.scale(pygame.image.load(os.path.join(carpeta_img_fondo,"fondo_1.png")).convert(), (screen_width, screen_height))
         self.btn_salir = Btn_salir("Salir", ((screen_width//3.6), (screen_height//1.30)), 600,60)
-        #self.btn_juego1 = Btn_juego_1("Telefono sin numeros",  ((screen_width//3.60), (screen_height//1.50)), 290,60, Telefono_sin_num.corre_juego1)
-        #self.btn_juego2 = Btn_juego_1("Iguala la imagen",  ((screen_width// 1.98), (screen_height//1.50)), 290,60, Iguala_imagen.corre_juego2)
+        self.btn_juego1 = Btn_juegos("Telefono sin numeros",  ((screen_width//3.60), (screen_height//1.50)), 290,60)
+        self.btn_juego2 = Btn_juegos("Iguala la imagen",  ((screen_width// 1.98), (screen_height//1.50)), 290,60)

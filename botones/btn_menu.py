@@ -1,9 +1,10 @@
 import pygame.font
+pygame.init()
 
 background_color = (255, 255, 255)
 button_color = (100, 100, 100)
 text_color = (255, 255, 255)
-class Button:
+class Btn_menu:
     def __init__(self, text, position, width, height):
         self.text = text
         self.position = position

@@ -1,11 +1,6 @@
-import pygame, sys,os
-import pygame.font
+import pygame,os,sys
 
-from menu.assets.botones.btn_salir import *
-from menu.juegos.juego1.assets.botones.btn_menu import *
-from menu.menu import *
-
-
+from botones.btn_menu import *
 
 # Inicializar Pygame
 pygame.init()
@@ -32,16 +27,4 @@ class Telefono_sin_num:
         self.juego_1 = pygame.display.set_mode((screen_width, screen_height), pygame.FULLSCREEN)
         self.color_font = (BLUE)
         pygame.display.set_caption("Telefono descompuesto")
-        
-    def corre_juego1(self):
-        while True:
-            for event in pygame.event.get():
-                if event.type == pygame.QUIT:
-                    pygame.quit()
-                    sys.exit()
-                    
-            self.juego_1.fill(self.color_font)
-            self.btn_menu.draw(self.juego_1)
-            
-            pygame.display.flip()
-        
+        self.btn_menu = Btn_menu("Menu", ((screen_width // 2), (screen_height // 2)), 600,60)
